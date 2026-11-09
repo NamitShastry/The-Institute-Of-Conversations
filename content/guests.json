@@ -1,0 +1,22 @@
+{
+  "title": "Our Guests",
+  "subtitle": "The Green Room",
+  "marquee": "Conversations in the making",
+  "description": "Distinguished voices from across industry, academia, public policy, and our alumni network entering the hall of dialogue.",
+  "filterCategories": ["All", "Alumni", "Industry", "Faculty", "Policy", "Sport"],
+  "items": [
+    { "id": "g-1", "name": "", "designation": "", "organisation": "", "photo": "", "tag": "Industry", "revealed": false },
+    { "id": "g-2", "name": "", "designation": "", "organisation": "", "photo": "", "tag": "Alumni", "revealed": false },
+    { "id": "g-3", "name": "", "designation": "", "organisation": "", "photo": "", "tag": "Faculty", "revealed": false },
+    { "id": "g-4", "name": "", "designation": "", "organisation": "", "photo": "", "tag": "Policy", "revealed": false },
+    { "id": "g-5", "name": "", "designation": "", "organisation": "", "photo": "", "tag": "Industry", "revealed": false },
+    { "id": "g-6", "name": "", "designation": "", "organisation": "", "photo": "", "tag": "Alumni", "revealed": false },
+    { "id": "g-7", "name": "", "designation": "", "organisation": "", "photo": "", "tag": "Sport", "revealed": false },
+    { "id": "g-8", "name": "", "designation": "", "organisation": "", "photo": "", "tag": "Industry", "revealed": false },
+    { "id": "g-9", "name": "", "designation": "", "organisation": "", "photo": "", "tag": "Faculty", "revealed": false },
+    { "id": "g-10", "name": "", "designation": "", "organisation": "", "photo": "", "tag": "Alumni", "revealed": false },
+    { "id": "g-11", "name": "", "designation": "", "organisation": "", "photo": "", "tag": "Policy", "revealed": false },
+    { "id": "g-12", "name": "", "designation": "", "organisation": "", "photo": "", "tag": "Industry", "revealed": false }
+  ]
+}
+

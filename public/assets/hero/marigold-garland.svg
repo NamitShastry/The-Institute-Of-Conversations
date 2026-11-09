@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <!-- Swag Curve String -->
+  <path d="M 480 20 C 380 60 220 180 120 360" stroke="#5E5349" stroke-width="2" stroke-dasharray="3 3" opacity="0.5"/>
+  <!-- Marigold Blossoms along curve -->
+  <!-- Flower 1 (top right) -->
+  <g transform="translate(440, 40)">
+    <circle cx="0" cy="0" r="26" fill="#F26A1B"/>
+    <circle cx="0" cy="0" r="21" fill="#F7B58A"/>
+    <circle cx="0" cy="0" r="14" fill="#F26A1B"/>
+    <circle cx="0" cy="0" r="7" fill="#7A2E12"/>
+  </g>
+  <!-- Flower 2 -->
+  <g transform="translate(390, 85)">
+    <circle cx="0" cy="0" r="28" fill="#F26A1B"/>
+    <circle cx="0" cy="0" r="22" fill="#F7B58A"/>
+    <circle cx="0" cy="0" r="15" fill="#B8470F"/>
+    <circle cx="0" cy="0" r="8" fill="#7A2E12"/>
+    <path d="M -15 15 C -25 25 -35 20 -40 30 C -35 15 -25 15 -15 15" fill="#5E5349" opacity="0.7"/>
+  </g>
+  <!-- Flower 3 -->
+  <g transform="translate(330, 140)">
+    <circle cx="0" cy="0" r="26" fill="#F26A1B"/>
+    <circle cx="0" cy="0" r="20" fill="#F7B58A"/>
+    <circle cx="0" cy="0" r="13" fill="#F26A1B"/>
+    <circle cx="0" cy="0" r="6" fill="#7A2E12"/>
+  </g>
+  <!-- Flower 4 -->
+  <g transform="translate(265, 205)">
+    <circle cx="0" cy="0" r="28" fill="#F26A1B"/>
+    <circle cx="0" cy="0" r="22" fill="#F7B58A"/>
+    <circle cx="0" cy="0" r="14" fill="#B8470F"/>
+    <circle cx="0" cy="0" r="7" fill="#7A2E12"/>
+    <path d="M 18 -10 C 28 -18 36 -12 42 -22 C 34 -10 24 -6 18 -10" fill="#5E5349" opacity="0.7"/>
+  </g>
+  <!-- Flower 5 -->
+  <g transform="translate(200, 275)">
+    <circle cx="0" cy="0" r="26" fill="#F26A1B"/>
+    <circle cx="0" cy="0" r="20" fill="#F7B58A"/>
+    <circle cx="0" cy="0" r="12" fill="#F26A1B"/>
+    <circle cx="0" cy="0" r="6" fill="#7A2E12"/>
+  </g>
+  <!-- Flower 6 (bottom) -->
+  <g transform="translate(130, 360)">
+    <circle cx="0" cy="0" r="27" fill="#F26A1B"/>
+    <circle cx="0" cy="0" r="21" fill="#F7B58A"/>
+    <circle cx="0" cy="0" r="14" fill="#B8470F"/>
+    <circle cx="0" cy="0" r="7" fill="#7A2E12"/>
+  </g>
+  <!-- Drifting loose petals and leaves -->
+  <ellipse cx="100" cy="420" rx="7" ry="4" fill="#F26A1B" transform="rotate(35, 100, 420)"/>
+  <ellipse cx="180" cy="370" rx="6" ry="3" fill="#F7B58A" transform="rotate(-20, 180, 370)"/>
+  <ellipse cx="310" cy="270" rx="8" ry="4" fill="#F26A1B" transform="rotate(45, 310, 270)"/>
+  <ellipse cx="240" cy="150" rx="6" ry="3" fill="#F7B58A" transform="rotate(-15, 240, 150)"/>
+</svg>

@@ -1,0 +1,37 @@
+{
+  "headline": {
+    "line1": "Institute of",
+    "line2": "Conversations",
+    "tag": "MNIT"
+  },
+  "eyebrow": "A STUDENT-RUN INSTITUTION · MNIT JAIPUR",
+  "tagline": "Where Ideas Meet.",
+  "subcopy": "Research-driven interviews, long-form conversations and the documented voices of MNIT Jaipur.",
+  "buttons": {
+    "primary": { "label": "Meet the Team", "href": "/team" },
+    "secondary": { "label": "See Our Events", "href": "/events" }
+  },
+  "stickers": [
+    { "label": "RESEARCH", "rotate": -3 },
+    { "label": "INTERVIEWS", "rotate": 2 },
+    { "label": "STORIES", "rotate": -2 },
+    { "label": "THE ARCHIVE", "rotate": 4 }
+  ],
+  "ticker": [
+    "RESEARCH",
+    "INTERVIEWS",
+    "MODERATION",
+    "STORYTELLING",
+    "THE ARCHIVE"
+  ],
+  "props": {
+    "jharokhaArch": { "type": "procedural-svg", "licence": "Original vector line-art in project palette" },
+    "condenserMic": { "type": "procedural-svg-3d", "licence": "Original procedural studio asset in project palette" },
+    "headphones": { "type": "procedural-svg-3d", "licence": "Original procedural studio asset in project palette" },
+    "vintageMic": { "type": "procedural-svg", "licence": "Original procedural studio asset in project palette" },
+    "marigoldGarland": { "type": "procedural-vector", "licence": "Original organic Rajasthani motif in project palette" },
+    "silkRibbons": { "type": "threejs-shader-mesh", "licence": "Custom GLSL silk wave simulation" },
+    "onAirSign": { "type": "interactive-component", "licence": "Original studio indicator component" }
+  }
+}
+

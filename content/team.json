@@ -1,0 +1,193 @@
+{
+  "title": "The Institute of Conversations",
+  "subtitle": "The Ensemble",
+  "description": "A structured institution for long-form dialogue, research, and institutional memory at MNIT Jaipur.",
+  "leadership": [
+    {
+      "id": "faculty-advisor",
+      "name": "Name TBA",
+      "role": "Faculty Advisor",
+      "designation": "FACULTY ADVISOR",
+      "rank": 1,
+      "year": "Faculty",
+      "photo": "/assets/avatars/faculty-advisor.svg",
+      "bio": "Guiding institutional governance, ethics, and strategic direction."
+    },
+    {
+      "id": "student-advisor",
+      "name": "Name TBA",
+      "role": "Student Advisor",
+      "designation": "STUDENT ADVISOR",
+      "rank": 2,
+      "year": "Senior Advisory",
+      "photo": "/assets/avatars/student-advisor.svg",
+      "bio": "Ensuring student body alignment, institutional continuity, and succession."
+    }
+  ],
+  "mentors": [
+    {
+      "id": "mentor-1",
+      "name": "Name TBA",
+      "role": "Mentor · Social Media & Tech",
+      "designation": "MENTOR · 3RD YEAR",
+      "year": "3rd Year",
+      "photo": "/assets/avatars/mentor-1.svg",
+      "mentoredTeamIds": ["social-media-editing", "tech-team"],
+      "bio": "Advising broadcast technologies, digital dissemination, and web architecture."
+    },
+    {
+      "id": "mentor-2",
+      "name": "Name TBA",
+      "role": "Mentor · Content",
+      "designation": "MENTOR · 3RD YEAR",
+      "year": "3rd Year",
+      "photo": "/assets/avatars/mentor-2.svg",
+      "mentoredTeamIds": ["content-research-hosting"],
+      "bio": "Advising investigative briefs, host preparation, and dialogue frameworks."
+    },
+    {
+      "id": "mentor-3",
+      "name": "Name TBA",
+      "role": "Mentor · Publicity & Logistics",
+      "designation": "MENTOR · 3RD YEAR",
+      "year": "3rd Year",
+      "photo": "/assets/avatars/mentor-3.svg",
+      "mentoredTeamIds": ["publicity-guest-outreach", "logistics-decor"],
+      "bio": "Advising high-profile guest hospitality, stagecraft, and campus outreach."
+    }
+  ],
+  "executives": [
+    {
+      "id": "president",
+      "name": "Name TBA",
+      "role": "President",
+      "designation": "PRESIDENT",
+      "year": "Executive",
+      "photo": "/assets/avatars/president.svg",
+      "bio": "Leading institutional vision, external affairs, and overall governance."
+    },
+    {
+      "id": "vp",
+      "name": "Name TBA",
+      "role": "Vice President",
+      "designation": "VICE PRESIDENT",
+      "year": "Executive",
+      "photo": "/assets/avatars/vp.svg",
+      "bio": "Overseeing cross-team execution, operational standards, and production workflows."
+    }
+  ],
+  "teams": [
+    {
+      "id": "social-media-editing",
+      "name": "Social Media & Editing",
+      "description": "Video production, audio mastering, visual aesthetics, and digital publishing across channels.",
+      "lead": {
+        "id": "lead-social",
+        "name": "Name TBA",
+        "role": "Team Lead · 2nd Year",
+        "designation": "TEAM LEAD",
+        "year": "2nd Year",
+        "photo": "/assets/avatars/lead-social.svg",
+        "bio": "Leading production pipeline, editorial pacing, and visual identity."
+      },
+      "members": [
+        { "id": "soc-1", "name": "Name TBA", "role": "Senior Editor", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "soc-2", "name": "Name TBA", "role": "Audio Engineer", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "soc-3", "name": "Name TBA", "role": "Motion Graphics", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "soc-4", "name": "Name TBA", "role": "Short-Form Specialist", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "soc-5", "name": "Name TBA", "role": "Video Editor", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "soc-6", "name": "Name TBA", "role": "Visual Designer", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "soc-7", "name": "Name TBA", "role": "Content Strategist", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "soc-8", "name": "Name TBA", "role": "Colorist & Post", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "soc-9", "name": "Name TBA", "role": "Social Channel Lead", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "soc-10", "name": "Name TBA", "role": "Archival Assistant", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" }
+      ]
+    },
+    {
+      "id": "content-research-hosting",
+      "name": "Content, Research & Hosting",
+      "description": "Investigative dossiers, deep-dive interview preparation, moderation framing, and stage hosting.",
+      "lead": {
+        "id": "lead-content",
+        "name": "Name TBA",
+        "role": "Team Lead · 2nd Year",
+        "designation": "TEAM LEAD",
+        "year": "2nd Year",
+        "photo": "/assets/avatars/lead-content.svg",
+        "bio": "Directing editorial inquiries, questioning frameworks, and hosting excellence."
+      },
+      "members": [
+        { "id": "cnt-1", "name": "Name TBA", "role": "Head Host", "designation": "HEAD HOST", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "Anchoring flagship long-form conversations." },
+        { "id": "cnt-2", "name": "Name TBA", "role": "Head Host", "designation": "HEAD HOST", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "Anchoring thematic and institutional dialogues." },
+        { "id": "cnt-3", "name": "Name TBA", "role": "Head Host", "designation": "HEAD HOST", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "Moderating live panels and student spotlights." },
+        { "id": "cnt-4", "name": "Name TBA", "role": "Senior Researcher", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "cnt-5", "name": "Name TBA", "role": "Research Associate", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "cnt-6", "name": "Name TBA", "role": "Dossier Specialist", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "cnt-7", "name": "Name TBA", "role": "Fact-Checker & Analyst", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" }
+      ]
+    },
+    {
+      "id": "publicity-guest-outreach",
+      "name": "Publicity & Guest Outreach",
+      "description": "Liaison with distinguished alumni, industry visionaries, visiting academics, and public relations.",
+      "lead": {
+        "id": "lead-publicity",
+        "name": "Name TBA",
+        "role": "Team Lead · 2nd Year",
+        "designation": "TEAM LEAD",
+        "year": "2nd Year",
+        "photo": "/assets/avatars/lead-publicity.svg",
+        "bio": "Managing dignitary communications, guest hospitality, and institutional representation."
+      },
+      "members": [
+        { "id": "pub-1", "name": "Name TBA", "role": "Alumni Relations Associate", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "pub-2", "name": "Name TBA", "role": "Industry Outreach Associate", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "pub-3", "name": "Name TBA", "role": "Media Liaison", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "pub-4", "name": "Name TBA", "role": "Communications Associate", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" }
+      ]
+    },
+    {
+      "id": "logistics-decor",
+      "name": "Logistics & Decor",
+      "description": "Physical stagecraft, acoustic staging, lighting architecture, studio ambiance, and event ops.",
+      "lead": {
+        "id": "lead-logistics",
+        "name": "Name TBA",
+        "role": "Team Lead · 2nd Year",
+        "designation": "TEAM LEAD",
+        "year": "2nd Year",
+        "photo": "/assets/avatars/lead-logistics.svg",
+        "bio": "Overseeing stage aesthetics, studio ergonomics, and equipment management."
+      },
+      "members": [
+        { "id": "log-1", "name": "Name TBA", "role": "Studio Manager", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "log-2", "name": "Name TBA", "role": "Lighting & Acoustic Tech", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "log-3", "name": "Name TBA", "role": "Stage & Set Designer", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "log-4", "name": "Name TBA", "role": "Inventory & Operations", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" }
+      ]
+    },
+    {
+      "id": "tech-team",
+      "name": "Tech Team",
+      "description": "Digital archives, streaming systems, web engineering, podcast distribution infrastructure, and analytics.",
+      "lead": {
+        "id": "lead-tech",
+        "name": "Name TBA",
+        "role": "Team Lead · 2nd Year",
+        "designation": "TEAM LEAD",
+        "year": "2nd Year",
+        "photo": "/assets/avatars/lead-tech.svg",
+        "bio": "Directing digital platforms, web infrastructure, and archival architecture."
+      },
+      "members": [
+        { "id": "tch-1", "name": "Name TBA", "role": "Web Engineer", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "tch-2", "name": "Name TBA", "role": "Archive Systems Engineer", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "tch-3", "name": "Name TBA", "role": "Audio Pipeline Specialist", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "tch-4", "name": "Name TBA", "role": "Platform Reliability Engineer", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "tch-5", "name": "Name TBA", "role": "Frontend Developer", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" },
+        { "id": "tch-6", "name": "Name TBA", "role": "Data & Distribution Analyst", "designation": "MEMBER", "year": "2nd/1st Year", "photo": "/assets/avatars/member.svg", "bio": "" }
+      ]
+    }
+  ]
+}
+

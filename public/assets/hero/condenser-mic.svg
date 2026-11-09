@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" fill="none">
+  <!-- Boom Arm -->
+  <line x1="480" y1="20" x2="320" y2="220" stroke="#1C1713" stroke-width="8" stroke-linecap="round"/>
+  <line x1="485" y1="30" x2="330" y2="225" stroke="#D9C3A5" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="320" cy="220" r="16" fill="#D9C3A5" stroke="#1C1713" stroke-width="4"/>
+  <line x1="320" y1="220" x2="240" y2="290" stroke="#1C1713" stroke-width="7" stroke-linecap="round"/>
+  <!-- Shockmount Spider Cradle -->
+  <circle cx="200" cy="330" r="42" stroke="#D9C3A5" stroke-width="3" stroke-dasharray="6 4"/>
+  <circle cx="200" cy="330" r="52" stroke="#1C1713" stroke-width="2.5"/>
+  <line x1="160" y1="310" x2="240" y2="350" stroke="#F26A1B" stroke-width="2"/>
+  <line x1="160" y1="350" x2="240" y2="310" stroke="#F26A1B" stroke-width="2"/>
+  <!-- Mic Body -->
+  <rect x="178" y="250" width="44" height="150" rx="22" fill="#E6D8C3" stroke="#1C1713" stroke-width="3.5"/>
+  <!-- Metal Mesh Grille Top -->
+  <rect x="178" y="250" width="44" height="75" rx="22" fill="#1C1713" fill-opacity="0.9" stroke="#1C1713" stroke-width="3.5"/>
+  <line x1="184" y1="270" x2="216" y2="270" stroke="#D9C3A5" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <line x1="184" y1="285" x2="216" y2="285" stroke="#D9C3A5" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <line x1="184" y1="300" x2="216" y2="300" stroke="#D9C3A5" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <!-- Orange Brand Band -->
+  <rect x="178" y="322" width="44" height="8" fill="#F26A1B"/>
+  <!-- Circular Pop Filter Screen & Gooseneck -->
+  <path d="M 200 330 C 140 330 110 380 90 440" stroke="#1C1713" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="90" cy="440" r="38" fill="#1C1713" fill-opacity="0.15" stroke="#1C1713" stroke-width="4"/>
+  <circle cx="90" cy="440" r="34" stroke="#D9C3A5" stroke-width="1.5"/>
+  <circle cx="90" cy="440" r="2" fill="#F26A1B"/>
+</svg>

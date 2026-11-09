@@ -1,0 +1,17 @@
+{
+  "title": "Gallery",
+  "subtitle": "The Reel",
+  "emptyStateMessage": "The first reel is being shot.",
+  "emptyStateDescription": "The archive is currently capturing our inaugural sessions, recording setups, and institute conversations.",
+  "albums": [
+    { "id": "all", "name": "All Reels" },
+    { "id": "voice-of-mnit", "name": "Voice of MNIT" },
+    { "id": "live-podcast-night", "name": "Live Podcast Night" },
+    { "id": "interview-olympics", "name": "Interview Olympics" },
+    { "id": "stories-of-mnit", "name": "Stories of MNIT" },
+    { "id": "hot-seat", "name": "Hot Seat" },
+    { "id": "annual-awards", "name": "Annual Awards" }
+  ],
+  "items": []
+}
+

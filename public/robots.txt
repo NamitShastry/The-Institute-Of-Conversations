@@ -1,0 +1,6 @@
+# Robots.txt for Institute of Conversations · MNIT Jaipur
+User-agent: *
+Allow: /
+
+Sitemap: https://iocmnit.ac.in/sitemap.xml
+

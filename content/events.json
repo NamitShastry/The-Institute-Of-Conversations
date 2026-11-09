@@ -1,0 +1,195 @@
+{
+  "title": "Our Events",
+  "eyebrow": "05 · OUR EVENTS",
+  "subtitle": "Six occasions. One academic year.",
+  "description": "An intentional cycle of auditions, arena recordings, competitive investigative journalism, and university storytelling anchored to the academic calendar.",
+  "events": [
+    {
+      "id": "voice-of-mnit",
+      "number": "01",
+      "name": "Voice of MNIT",
+      "subtitle": "Open Mic & Auditions",
+      "season": "Aug–Sept",
+      "seasonMonth": "Aug",
+      "hook": "Two minutes on the mic to share an unfiltered idea, critique, or story.",
+      "whatHappens": [
+        "Held immediately following fresher orientation, Voice of MNIT transforms the campus courtyard into an open-stage forum. Any student from any department or year can walk up to the broadcast microphone and speak for two uninterrupted minutes on any topic of their choosing.",
+        "The format removes all formal gates, slide decks, and rehearsed scripts. It serves as the primary live talent discovery window for the Institute of Conversations, where impromptu clarity, cadence, and vocal courage are evaluated in real time.",
+        "The strongest voices discovered on stage receive direct invitations to join the Institute's training cohorts across research, interviewing, and editorial moderation."
+      ],
+      "howItWorks": [
+        { "step": "01", "title": "Open Walk-Up Registration", "detail": "Students arrive at the courtyard stage and draw a speaker queue token." },
+        { "step": "02", "title": "The Two-Minute Bell", "detail": "Each speaker takes the spotlit condenser mic with a clean 120-second timer." },
+        { "step": "03", "title": "Editorial Evaluation", "detail": "Executive researchers and senior hosts note argumentation, pacing, and delivery." },
+        { "step": "04", "title": "Cohort Invitations", "detail": "Standout speakers receive letters of invitation into the club's development pipeline." }
+      ],
+      "whoCanTakePart": "Open to all enrolled students of MNIT Jaipur across all undergraduate, postgraduate, and doctoral disciplines. No prior media or debate experience required.",
+      "walkAwayWith": "Direct on-stage microphone experience, constructive feedback from senior hosts, and potential recruitment into the flagship interview team.",
+      "clubOutput": "Selected audio excerpts are mastered for campus social reels, and high-potential speakers are onboarded into the autumn production cohort.",
+      "format": {
+        "season": "Aug–Sept (Post-Orientation)",
+        "duration": "2 Minutes per Speaker",
+        "participants": "Open to All Enrolled Students",
+        "setting": "Courtyard Open-Air Stage",
+        "output": "Recruitment & Social Excerpts"
+      },
+      "icon": "mic"
+    },
+    {
+      "id": "live-podcast-night",
+      "number": "02",
+      "name": "Live Podcast Night",
+      "subtitle": "Auditorium Arena Broadcast",
+      "season": "Oct–Nov",
+      "seasonMonth": "Oct",
+      "hook": "A flagship long-form conversation staged live before a packed auditorium.",
+      "whatHappens": [
+        "Live Podcast Night is the Institute's premier mid-autumn showcase, moving the intimate recording studio into a high-capacity auditorium. The stage is set with professional multi-camera angles, studio acoustic baffles, and warm broadcast lighting.",
+        "A marquee guest—such as the Director, Dean of Student Welfare, or a distinguished university alumnus—joins our student hosts on stage for an in-depth, research-grounded interview exploring institutional vision and career journeys.",
+        "During the second half of the dialogue, the floor opens to moderated audience inquiries, allowing students to ask candid, intellectually substantive questions directly from the hall."
+      ],
+      "howItWorks": [
+        { "step": "01", "title": "Dossier Compilation", "detail": "The research wing produces an exhaustive intellectual briefing on the invited dignitary." },
+        { "step": "02", "title": "Live Arena Staging", "detail": "A multi-camera broadcast rig records the unscripted dialogue before a live university audience." },
+        { "step": "03", "title": "Floor Q&A Exchange", "detail": "Audience questions are passed through student moderation to ensure depth and focus." },
+        { "step": "04", "title": "Full Archival Mastering", "detail": "The master audio is cataloged into the university permanent archive and clipped into reels." }
+      ],
+      "whoCanTakePart": "All MNIT Jaipur students and faculty are eligible to attend in the auditorium audience and submit questions during the moderated floor period.",
+      "walkAwayWith": "Unfiltered access to institutional leadership and industry alumni, plus an inside look at multi-camera live broadcast production.",
+      "clubOutput": "Full-length archived podcast episode, high-impact short-form video reels, and permanent university archival documentation.",
+      "format": {
+        "season": "Oct–Nov (Mid-Semester)",
+        "duration": "75–90 Minutes",
+        "participants": "Full University Community",
+        "setting": "Main Auditorium Broadcast Stage",
+        "output": "Archival Master & Reel Highlights"
+      },
+      "icon": "theater"
+    },
+    {
+      "id": "interview-olympics",
+      "number": "03",
+      "name": "Interview Olympics",
+      "subtitle": "24-Hour Investigative Showdown",
+      "season": "Jan–Feb",
+      "seasonMonth": "Jan",
+      "hook": "Cross-branch inter-departmental tournament of investigative research and live interrogation.",
+      "whatHappens": [
+        "In the early spring, academic branches compete head-to-head in an intensive test of preparation and inquiry. Each participating branch fields a dedicated team of researchers and interviewers.",
+        "Teams are handed a sealed dossier containing only the identity of a mystery guest with exactly 24 hours to conduct comprehensive open-source research, uncover overlooked achievements, and draft a structured 15-minute inquiry strategy.",
+        "On competition day, each team steps onto the stage to interview the mystery guest live. Teams are evaluated strictly on the quality of their research, their ability to listen and follow up, and the depth of insight elicited from the subject."
+      ],
+      "howItWorks": [
+        { "step": "01", "title": "Mystery Guest Reveal", "detail": "Branch teams open sealed envelopes at T-minus 24 hours to learn their subject's identity." },
+        { "step": "02", "title": "24-Hour Dossier Sprint", "detail": "Teams cross-reference publications, patents, career pivots, and public records." },
+        { "step": "03", "title": "Live Stage Inquiries", "detail": "Each branch conducts a 15-minute live on-stage interview under observation." },
+        { "step": "04", "title": "Adjudication & Crown", "detail": "A panel of senior journalists and faculty scores teams on investigative rigor and pacing." }
+      ],
+      "whoCanTakePart": "Multi-member teams formally representing MNIT academic departments (Civil, CSE, Mechanical, Electrical, Architecture, Chemical, etc.).",
+      "walkAwayWith": "Intensive investigative briefing training, masterclasses in live conversational moderation, and departmental recognition.",
+      "clubOutput": "Archived research dossiers for club reference library, competition recording reels, and identification of future lead interviewers.",
+      "format": {
+        "season": "Jan–Feb (Early Spring)",
+        "duration": "24h Prep + 15m Stage Per Team",
+        "participants": "Departmental Student Teams",
+        "setting": "Seminar Hall / Main Stage",
+        "output": "Live Competitive Broadcast"
+      },
+      "icon": "trophy"
+    },
+    {
+      "id": "stories-of-mnit",
+      "number": "04",
+      "name": "Stories of MNIT",
+      "subtitle": "Storytelling & Campus Memoir Night",
+      "season": "Mar",
+      "seasonMonth": "Mar",
+      "hook": "Five-minute true personal stories that define the lived human experience of MNIT.",
+      "whatHappens": [
+        "Stories of MNIT is an intimate evening dedicated to narrative craft and personal history. Under warm courtyard lantern lighting, students and campus residents share 5-minute personal, true stories without notes or slides.",
+        "Narratives span pivotal life moments: the vulnerability of early semester failures, late-night hostel camaraderie, fledgling campus startups, the emotional weight of the JEE journey, and moments of quiet triumph.",
+        "The sessions directly advance the Institute's mandate to preserve an authentic oral history of the university, capturing the emotional texture of campus life that administrative records omit."
+      ],
+      "howItWorks": [
+        { "step": "01", "title": "Story Pitches", "detail": "Students submit a one-paragraph synopsis of their true personal story." },
+        { "step": "02", "title": "Narrative Coaching", "detail": "Club writers assist storytellers in structuring their dramatic arc and sensory details." },
+        { "step": "03", "title": "The Lantern Stage", "detail": "Storytellers take the mic for five focused minutes before a quiet, seated audience." },
+        { "step": "04", "title": "Oral History Archiving", "detail": "Lossless audio captures are cataloged into the university audio archive." }
+      ],
+      "whoCanTakePart": "Any student, research scholar, or campus resident with a true personal story connected to their journey at MNIT Jaipur.",
+      "walkAwayWith": "Professional storytelling and public delivery coaching, a keepsake studio audio master of their story, and a permanent place in the archive.",
+      "clubOutput": "Permanent entries in the 'Voices of MNIT' audio archive, curated podcast anthology episodes, and documentary-style short clips.",
+      "format": {
+        "season": "March (Late Spring)",
+        "duration": "5 Minutes per Storyteller",
+        "participants": "Curated Student & Resident Voices",
+        "setting": "Courtyard Lantern Stage",
+        "output": "Permanent Oral History Archive"
+      },
+      "icon": "book"
+    },
+    {
+      "id": "hot-seat",
+      "number": "05",
+      "name": "Hot Seat",
+      "subtitle": "Students vs. Faculty & Alumni",
+      "season": "Mar–Apr",
+      "seasonMonth": "Mar",
+      "hook": "Candid, civil, constructive cross-examination on real campus issues and career paths.",
+      "whatHappens": [
+        "Hot Seat bridges the institutional divide by placing student representatives and campus decision-makers in facing armchairs for constructive dialogue.",
+        "A panel of professors, department heads, or Jaipur Alumni Association (JAA) leaders sit opposite prepared student interviewers to discuss curriculum relevance, career realities, campus life, and institutional direction.",
+        "The format maintains absolute journalistic integrity: questions are respectful, deeply researched, and never hostile, while avoiding public-relations platitudes to ensure genuine institutional transparency."
+      ],
+      "howItWorks": [
+        { "step": "01", "title": "Agenda Polling", "detail": "Student inquiries and concerns are surveyed across hostels and departments." },
+        { "step": "02", "title": "Panel Formation", "detail": "Faculty representatives and visiting alumni consent to participate on specific themes." },
+        { "step": "03", "title": "The Face-to-Face Session", "detail": "Structured 60-minute recorded exchange with timed rebuttal and audience clarification." },
+        { "step": "04", "title": "Institutional Summary", "detail": "Actionable takeaways and perspectives are documented and released publicly." }
+      ],
+      "whoCanTakePart": "Students may submit agenda topics and attend the session; student interviewers are selected from the Institute's senior moderation cohort.",
+      "walkAwayWith": "Direct answers to pressing university concerns, transparent career mentorship from alumni, and civil debate experience.",
+      "clubOutput": "Full broadcast video, thematic breakdown reels, and a constructive summary briefing shared with student welfare authorities.",
+      "format": {
+        "season": "Mar–Apr (Pre-Exam Window)",
+        "duration": "60 Minutes",
+        "participants": "Student Body & Faculty/Alumni Panel",
+        "setting": "Facing Armchair Studio Stage",
+        "output": "Full Broadcast & Policy Notes"
+      },
+      "icon": "users"
+    },
+    {
+      "id": "annual-awards",
+      "number": "06",
+      "name": "Annual Conversations Awards",
+      "subtitle": "Year-End Institutional Gala",
+      "season": "Apr",
+      "seasonMonth": "Apr",
+      "hook": "Celebrating intellectual courage, outstanding interviews, and the voices that shaped the academic year.",
+      "whatHappens": [
+        "The academic year concludes with the Annual Conversations Awards Gala, honoring the researchers, hosts, guests, and storytellers who elevated dialogue across MNIT Jaipur.",
+        "Categories honor both on-mic and behind-the-scenes excellence, including Best Episode, Best Guest Interview, Best Student Voice, Most Probing Question, and the Outstanding Investigative Dossier of the Year.",
+        "Nominations are opened institute-wide, culminating in a spotlit ceremonial evening with faculty advisors, club alumni, and student peers that produces the definitive annual highlight reel."
+      ],
+      "howItWorks": [
+        { "step": "01", "title": "Campus Nominations", "detail": "Students submit nominations for their favorite dialogues, episodes, and moments." },
+        { "step": "02", "title": "Advisory Review", "detail": "The Faculty and Student Advisory committee audits nominations against journalistic criteria." },
+        { "step": "03", "title": "The Gala Evening", "detail": "Formal award presentations, live acoustic performances, and keynote reflections." },
+        { "step": "04", "title": "Annual Reel Release", "detail": "The premiere of the Institute's commemorative year-end retrospective film." }
+      ],
+      "whoCanTakePart": "All members of the MNIT Jaipur community may nominate, attend the gala, and celebrate the season's milestones.",
+      "walkAwayWith": "Formal university recognition, physical bespoke award citations, and portfolio inclusion in the annual broadcast reel.",
+      "clubOutput": "The definitive Annual Retrospective Video, formal handover to incoming leadership, and archival yearbook release.",
+      "format": {
+        "season": "April (Academic Year-End)",
+        "duration": "120 Minutes",
+        "participants": "All Students, Faculty & Guests",
+        "setting": "Auditorium Gala Stage",
+        "output": "Annual Highlight Reel & Citations"
+      },
+      "icon": "star"
+    }
+  ]
+}
+

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" fill="none">
+  <!-- Outer Arch Outline -->
+  <path d="M 80 780 L 80 420 C 80 260 180 120 300 70 C 420 120 520 260 520 420 L 520 780" stroke="#D9C3A5" stroke-width="4" stroke-linecap="round"/>
+  <!-- Inner Cusped Foil Arch (Traditional Rajasthani Mehrab) -->
+  <path d="M 120 780 L 120 440 C 120 360 160 330 180 300 C 190 280 200 240 240 220 C 270 200 280 160 300 130 C 320 160 330 200 360 220 C 400 240 410 280 420 300 C 440 330 480 360 480 440 L 480 780" stroke="#D9C3A5" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 0"/>
+  <!-- Top Finial Kalash -->
+  <path d="M 300 70 L 300 30 M 292 45 C 292 40 308 40 308 45 C 308 55 292 55 292 65" stroke="#F26A1B" stroke-width="2" stroke-linecap="round"/>
+  <!-- Jali lattice pattern dots inside spandrels -->
+  <g fill="#D9C3A5" opacity="0.4">
+    <circle cx="140" cy="200" r="3"/><circle cx="170" cy="180" r="3"/><circle cx="200" cy="160" r="3"/><circle cx="230" cy="140" r="3"/>
+    <circle cx="460" cy="200" r="3"/><circle cx="430" cy="180" r="3"/><circle cx="400" cy="160" r="3"/><circle cx="370" cy="140" r="3"/>
+  </g>
+  <!-- Base sill molding -->
+  <line x1="60" y1="780" x2="540" y2="780" stroke="#D9C3A5" stroke-width="6" stroke-linecap="round"/>
+  <line x1="40" y1="795" x2="560" y2="795" stroke="#1C1713" stroke-width="1.5" stroke-opacity="0.2"/>
+</svg>

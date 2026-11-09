@@ -1,0 +1,62 @@
+{
+  "title": "Our Sponsors",
+  "subtitle": "The Marquee",
+  "description": "Our partners will be announced as the curtain rises.",
+  "tiers": [
+    {
+      "id": "powered-by",
+      "name": "Powered By",
+      "slotCount": 1,
+      "size": "grand",
+      "items": [
+        {
+          "id": "p-1",
+          "tier": "Powered By",
+          "name": "",
+          "logo": "",
+          "tag": "",
+          "url": "",
+          "revealed": false
+        }
+      ]
+    },
+    {
+      "id": "co-powered-by",
+      "name": "Co-Powered By",
+      "slotCount": 1,
+      "size": "prominent",
+      "items": [
+        {
+          "id": "cp-1",
+          "tier": "Co-Powered By",
+          "name": "",
+          "logo": "",
+          "tag": "",
+          "url": "",
+          "revealed": false
+        }
+      ]
+    },
+    {
+      "id": "official-partners",
+      "name": "Official Partners",
+      "slotCount": 12,
+      "size": "standard",
+      "items": [
+        { "id": "op-1", "tier": "Official Partner", "name": "", "logo": "", "tag": "", "url": "", "revealed": false },
+        { "id": "op-2", "tier": "Official Partner", "name": "", "logo": "", "tag": "", "url": "", "revealed": false },
+        { "id": "op-3", "tier": "Official Partner", "name": "", "logo": "", "tag": "", "url": "", "revealed": false },
+        { "id": "op-4", "tier": "Official Partner", "name": "", "logo": "", "tag": "", "url": "", "revealed": false },
+        { "id": "op-5", "tier": "Official Partner", "name": "", "logo": "", "tag": "", "url": "", "revealed": false },
+        { "id": "op-6", "tier": "Official Partner", "name": "", "logo": "", "tag": "", "url": "", "revealed": false },
+        { "id": "op-7", "tier": "Official Partner", "name": "", "logo": "", "tag": "", "url": "", "revealed": false },
+        { "id": "op-8", "tier": "Official Partner", "name": "", "logo": "", "tag": "", "url": "", "revealed": false },
+        { "id": "op-9", "tier": "Official Partner", "name": "", "logo": "", "tag": "", "url": "", "revealed": false },
+        { "id": "op-10", "tier": "Official Partner", "name": "", "logo": "", "tag": "", "url": "", "revealed": false },
+        { "id": "op-11", "tier": "Official Partner", "name": "", "logo": "", "tag": "", "url": "", "revealed": false },
+        { "id": "op-12", "tier": "Official Partner", "name": "", "logo": "", "tag": "", "url": "", "revealed": false }
+      ]
+    }
+  ]
+}
+

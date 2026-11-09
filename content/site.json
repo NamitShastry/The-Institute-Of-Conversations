@@ -1,0 +1,25 @@
+{
+  "name": "Institute of Conversations",
+  "shortName": "IoC · MNIT Jaipur",
+  "tagline": "Where Ideas Meet.",
+  "subtagline": "A student-led institutional platform for research-driven interviews, long-form conversations, storytelling, and an enduring archive of the voices of MNIT Jaipur.",
+  "contactEmail": "namitshastry@gmail.com",
+  "location": "Malaviya National Institute of Technology Jaipur, JLN Marg, Jaipur, Rajasthan 302017",
+  "footerNote": "A student-led institutional platform of MNIT Jaipur.",
+  "navigation": [
+    { "label": "About", "href": "/" },
+    { "label": "Our Sponsors", "href": "/sponsors" },
+    { "label": "Our Guests", "href": "/guests" },
+    { "label": "Our Team", "href": "/team" },
+    { "label": "Our Events", "href": "/events" },
+    { "label": "Gallery", "href": "/gallery" },
+    { "label": "Contact Us", "href": "/contact" }
+  ],
+  "socials": {
+    "instagram": "",
+    "youtube": "",
+    "linkedin": "",
+    "twitter": "",
+    "spotify": ""
+  }
+}
