@@ -7,7 +7,6 @@ import { ArchFrame } from "@/components/ui/ArchFrame";
 import { GuestsData } from "@/lib/types";
 import rawGuestsData from "@content/guests.json";
 import { cn } from "@/lib/utils";
-import { Sparkles } from "lucide-react";
 
 const guestsData = rawGuestsData as GuestsData;
 
@@ -21,17 +20,14 @@ export default function GuestsPage() {
 
   return (
     <div className="w-full bg-cream text-ink min-h-screen pt-28 pb-32 relative overflow-hidden">
-      {/* Background paper texture */}
-      <div className="absolute inset-0 pointer-events-none paper-grain" />
-
       {/* Slow Marquee Ribbon */}
-      <div className="w-full overflow-hidden py-2.5 bg-sand border-y border-hairline mb-12">
-        <div className="flex space-x-12 whitespace-nowrap animate-shimmer">
+      <div className="w-full overflow-hidden py-2.5 bg-cream-deep/70 border-y border-line mb-12">
+        <div className="flex space-x-12 whitespace-nowrap animate-marquee">
           {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="flex items-center space-x-6 font-mono text-xs uppercase tracking-mono font-semibold text-ink">
-              <span>✱</span>
+            <div key={i} className="flex items-center space-x-6 font-mono text-xs uppercase tracking-mono text-ink-soft">
+              <span className="text-orange">✱</span>
               <span>{guestsData.marquee}</span>
-              <span>✱</span>
+              <span className="text-orange">✱</span>
               <span>The Green Room</span>
             </div>
           ))}
@@ -42,10 +38,10 @@ export default function GuestsPage() {
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <Eyebrow number="04" label="OUR GUESTS" className="mb-3" />
-          <h1 className="font-sans font-bold text-4xl sm:text-6xl md:text-7xl tracking-tightest text-ink mt-2">
-            The Green Room
+          <h1 className="font-display font-semibold text-4xl sm:text-6xl md:text-7xl tracking-tightest text-ink mt-2">
+            The <span className="font-accent text-ink">Green Room</span>
           </h1>
-          <p className="font-serif italic text-orange-deep text-lg sm:text-2xl mt-3">
+          <p className="font-serif italic text-ink-soft text-lg sm:text-2xl mt-3">
             &ldquo;{guestsData.description}&rdquo;
           </p>
           <GoldRule />
@@ -59,8 +55,8 @@ export default function GuestsPage() {
                 className={cn(
                   "px-4 py-1.5 rounded-full font-mono text-xs uppercase tracking-mono transition-all",
                   selectedTag === category
-                    ? "bg-orange text-ink font-bold shadow-orange-sm"
-                    : "bg-sand-light text-ink-soft hover:text-ink border border-sand"
+                    ? "bg-orange-strong text-cream font-medium shadow-soft"
+                    : "bg-paper text-ink-soft hover:text-ink border border-line"
                 )}
               >
                 {category}
@@ -78,8 +74,8 @@ export default function GuestsPage() {
 
         {/* Footnote on In-Camera Privacy */}
         <div className="mt-20 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sand-light border border-sand font-mono text-xs text-ink-soft">
-            <Sparkles className="w-3.5 h-3.5 text-orange" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cream-deep/70 border border-line font-mono text-xs text-ink-soft">
+            <span className="w-1.5 h-1.5 rounded-full bg-orange" />
             <span>Invitations and session recordings remain confidential until official broadcast.</span>
           </div>
         </div>

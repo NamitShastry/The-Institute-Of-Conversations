@@ -6,6 +6,11 @@
   "contactEmail": "namitshastry@gmail.com",
   "location": "Malaviya National Institute of Technology Jaipur, JLN Marg, Jaipur, Rajasthan 302017",
   "footerNote": "A student-led institutional platform of MNIT Jaipur.",
+  "announcement": {
+    "tag": "NEW",
+    "text": "Our Events: six occasions, one academic year",
+    "href": "/events"
+  },
   "navigation": [
     { "label": "About", "href": "/" },
     { "label": "Our Sponsors", "href": "/sponsors" },

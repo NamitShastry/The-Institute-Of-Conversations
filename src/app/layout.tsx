@@ -2,13 +2,12 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
-import { SpotlightCursor } from "@/components/layout/SpotlightCursor";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { CurtainTransition } from "@/components/layout/CurtainTransition";
 import siteData from "@content/site.json";
 
 export const viewport: Viewport = {
-  themeColor: "#F3ECE0",
+  themeColor: "#F3EEE3",
   colorScheme: "light",
 };
 
@@ -48,13 +47,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="selection:bg-orange selection:text-ink">
+    <html lang="en" className="selection:bg-orange-tint selection:text-ink">
       <body className="font-sans antialiased bg-cream text-ink flex flex-col min-h-screen relative overflow-x-hidden">
-        {/* Subtle paper grain texture */}
-        <div className="fixed inset-0 pointer-events-none z-10 paper-grain" />
-
-        {/* Custom Spotlight Cursor (Orange dot + peach halo) */}
-        <SpotlightCursor />
+        {/* Skip to Main Content for Accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-4 z-50 bg-ink text-cream px-4 py-2 rounded-full text-xs font-mono tracking-mono shadow-soft"
+        >
+          Skip to main content
+        </a>
 
         {/* Global Smooth Virtual Scroll */}
         <SmoothScroll>

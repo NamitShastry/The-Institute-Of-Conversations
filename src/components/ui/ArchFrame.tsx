@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Lock, User } from "lucide-react";
 import { GuestItem } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -13,16 +14,19 @@ interface ArchFrameProps {
 
 export const ArchFrame: React.FC<ArchFrameProps> = ({ guest, className }) => {
   if (guest.revealed && guest.name) {
-    // Unveiled / Announced Guest
+    // Unveiled / Announced Guest with clean mask wipe
     return (
-      <div
+      <motion.div
+        initial={{ clipPath: "inset(0 0 100% 0)", opacity: 0 }}
+        animate={{ clipPath: "inset(0 0 0% 0)", opacity: 1 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className={cn(
           "group relative flex flex-col items-center text-center",
           className
         )}
       >
-        <div className="w-48 sm:w-56 h-64 sm:h-72 rounded-t-full rounded-b-2xl p-1 bg-sand border-2 border-orange shadow-subtle mb-4">
-          <div className="w-full h-full rounded-t-full rounded-b-xl overflow-hidden bg-cream relative">
+        <div className="w-48 sm:w-56 h-64 sm:h-72 rounded-t-full rounded-b-2xl p-1 bg-paper border border-line shadow-card mb-4 group-hover:border-orange/60 transition-colors">
+          <div className="w-full h-full rounded-t-full rounded-b-xl overflow-hidden bg-cream-deep relative">
             <Image
               src={guest.photo || "/assets/avatars/member.svg"}
               alt={guest.name}
@@ -32,20 +36,20 @@ export const ArchFrame: React.FC<ArchFrameProps> = ({ guest, className }) => {
           </div>
         </div>
 
-        <span className="font-mono text-[10px] uppercase tracking-mono font-semibold text-orange-deep">
+        <span className="font-mono text-[10px] uppercase tracking-mono font-medium text-orange">
           {guest.tag}
         </span>
-        <h4 className="font-sans font-bold text-xl text-ink mt-1">
+        <h4 className="font-display font-semibold text-lg text-ink mt-1 tracking-tight">
           {guest.name}
         </h4>
         <p className="font-sans text-xs text-ink-soft mt-0.5">
           {guest.designation} · {guest.organisation}
         </p>
-      </div>
+      </motion.div>
     );
   }
 
-  // Sealed Stage Door Arch Frame (Theme Revision: sand arched frames with cream silhouettes, orange nameplate line, drifting peach spotlight sweep)
+  // Sealed Stage Door Frame: rounded portrait frame with neutral silhouette on --cream-deep, hairline tags
   return (
     <div
       className={cn(
@@ -53,35 +57,29 @@ export const ArchFrame: React.FC<ArchFrameProps> = ({ guest, className }) => {
         className
       )}
     >
-      {/* Sand Stage Door Arch with Cream Silhouette */}
-      <div className="relative w-48 sm:w-56 h-64 sm:h-72 rounded-t-full rounded-b-2xl p-1 bg-sand border border-sand-dark shadow-subtle group-hover:border-orange transition-all duration-300">
-        {/* Inner Stage Light */}
-        <div className="relative w-full h-full rounded-t-full rounded-b-xl overflow-hidden bg-sand-light/60 flex flex-col items-center justify-center p-4">
-          {/* Drifting Peach Spotlight Sweep */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(247,181,138,0.45)_0%,transparent_70%)] group-hover:opacity-100 opacity-60 transition-opacity" />
-
-          {/* Cream Silhouette Head & Shoulders */}
-          <div className="relative z-10 w-22 h-22 rounded-full bg-cream border border-sand flex items-center justify-center mb-4 shadow-xs">
-            <User className="w-10 h-10 text-sand-dark group-hover:text-orange transition-colors" />
+      <div className="relative w-48 sm:w-56 h-64 sm:h-72 rounded-t-full rounded-b-2xl p-1 bg-paper border border-line shadow-card group-hover:border-orange/50 transition-colors duration-200">
+        <div className="relative w-full h-full rounded-t-full rounded-b-xl overflow-hidden bg-cream-deep flex flex-col items-center justify-center p-4">
+          {/* Neutral Silhouette Head & Shoulders */}
+          <div className="relative z-10 w-20 h-20 rounded-full bg-paper border border-line flex items-center justify-center mb-3">
+            <User className="w-9 h-9 text-ink-muted group-hover:text-ink transition-colors" />
           </div>
 
-          {/* Wax Lock Badge in Orange */}
-          <div className="relative z-10 w-8 h-8 rounded-full bg-cream border border-orange flex items-center justify-center shadow-xs">
-            <Lock className="w-3.5 h-3.5 text-orange" />
+          {/* Minimal Lock Icon in --ink-muted */}
+          <div className="relative z-10 w-7 h-7 rounded-full bg-paper border border-line flex items-center justify-center">
+            <Lock className="w-3.5 h-3.5 text-ink-muted group-hover:text-orange transition-colors" />
           </div>
         </div>
       </div>
 
-      {/* Sealed Nameplate */}
+      {/* Hairline Tag Nameplate */}
       <div className="mt-4 text-center max-w-[200px]">
-        <span className="font-mono text-[9px] uppercase tracking-mono font-semibold text-orange-deep block">
+        <span className="font-mono text-[9px] uppercase tracking-mono text-ink-muted block">
           {guest.tag || "Distinguished Voice"}
         </span>
-        <h4 className="font-sans font-bold text-base text-ink tracking-tight mt-0.5">
+        <h4 className="font-display font-semibold text-base text-ink tracking-tight mt-0.5">
           Revealing Soon
         </h4>
-        {/* Orange nameplate line */}
-        <div className="w-8 h-[1.5px] bg-orange mx-auto my-1" />
+        <div className="w-6 h-[1px] bg-orange mx-auto my-1.5" />
         <span className="font-mono text-[9px] uppercase tracking-mono text-ink-soft block">
           In Green Room
         </span>

@@ -1,26 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter+Tight:ital,wght@0,500;0,600;0,700;1,600&family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Brand palette */
-  --cream: #F3ECE0;
-  --sand: #D9C3A5;
-  --sand-light: #E6D8C3;
-  --peach: #F7B58A;
-  --orange: #F26A1B;
-  --orange-hover: #D85A12;
-  --orange-deep: #B8470F;
-  --rust: #7A2E12;
-  --ink: #1C1713;
-  --ink-soft: #5E5349;
+  /* Revision 3 Brand colours (from reference) */
+  --cream: #F3EEE3;
+  --ink: #111111;
+  --orange: #D9541E;
+
+  /* Derived tones */
+  --paper: #FBF9F4;
+  --cream-deep: #EAE3D3;
+  --line: rgba(17, 17, 17, 0.12);
+  --line-on-dark: rgba(243, 238, 227, 0.16);
+  --ink-soft: #55514A;
+  --ink-muted: #8A857B;
+  --orange-strong: #C74817;
+  --orange-hover: #B03F12;
+  --orange-deep: #B8431A;
+  --orange-tint: #F6DCCB;
+  --ember: #7A2A0E;
   --error: #B3261E;
 
-  /* Signature silk gradient */
-  --silk: radial-gradient(120% 90% at 70% 60%, #F26A1B 0%, #D85A12 28%, #7A2E12 46%, transparent 62%),
-          linear-gradient(115deg, #F3ECE0 0%, #E6D8C3 38%, #F7B58A 58%, #F26A1B 80%, #B8470F 100%);
+  /* 3D silk shading palette */
+  --silk-highlight: #F2A57F;
+  --silk-mid: #D9541E;
+  --silk-shadow: #7A2A0E;
+  --silk-sheen: #F3EEE3;
+
+  /* Motion tokens */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
 }
 
 html {
@@ -37,89 +50,80 @@ body {
   background-color: var(--cream);
   color: var(--ink);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: var(--orange);
+  background: var(--orange-tint);
   color: var(--ink);
 }
 
-/* Accessible focus ring */
+/* Accessible focus ring: 2px ink + 2px orange offset */
 :focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 2px;
-  box-shadow: 0 0 0 4px var(--orange);
+  box-shadow: 0 0 0 2px var(--orange);
   border-radius: 4px;
 }
 
-/* Fine paper grain overlay */
-.paper-grain {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+/* Hairlines */
+.border-line {
+  border-color: var(--line);
 }
 
-/* Hairline border at 15-20% opacity */
-.border-hairline {
-  border-color: rgba(28, 23, 19, 0.16);
+.border-line-dark {
+  border-color: var(--line-on-dark);
 }
 
-.border-hairline-sand {
-  border-color: rgba(217, 195, 165, 0.7);
-}
-
-/* Marker highlight effect (orange fill behind ink text) */
+/* Marker highlight effect (orange fill behind text on ink dark sections) */
 .marker-highlight {
-  background: linear-gradient(104deg, rgba(242, 106, 27, 0) 0.9%, rgba(242, 106, 27, 0.85) 2.4%, rgba(242, 106, 27, 0.85) 98%, rgba(242, 106, 27, 0) 99.5%);
+  background: linear-gradient(104deg, rgba(217, 84, 30, 0) 0.9%, rgba(217, 84, 30, 0.88) 2.4%, rgba(217, 84, 30, 0.88) 98%, rgba(217, 84, 30, 0) 99.5%);
   padding: 0.1em 0.35em;
-  color: var(--ink);
-  border-radius: 2px;
+  color: var(--cream);
+  border-radius: 3px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
-/* Custom scrollbar in cream/sand */
+/* Headline balance & paragraph pretty */
+h1, h2, h3, h4, .text-balance {
+  text-wrap: balance;
+}
+
+p, .text-pretty {
+  text-wrap: pretty;
+}
+
+/* Signature accent font (Instrument Serif Italic) */
+.font-accent {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  display: inline-block;
+  transform: scale(1.04);
+  transform-origin: baseline;
+}
+
+/* Restrained custom scrollbar in cream/ink */
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: var(--cream);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--sand);
-  border-radius: 4px;
+  background: rgba(17, 17, 17, 0.2);
+  border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--orange);
 }
 
-/* Registration crosshair mark */
-.crosshair-mark {
-  position: relative;
-  width: 11px;
-  height: 11px;
-}
-.crosshair-mark::before {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: 0;
-  width: 11px;
-  height: 1px;
-  background-color: rgba(28, 23, 19, 0.3);
-}
-.crosshair-mark::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 5px;
-  width: 1px;
-  height: 11px;
-  background-color: rgba(28, 23, 19, 0.3);
-}
-
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *, ::before, ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

@@ -20,9 +20,9 @@ export const CurtainTransition: React.FC<CurtainTransitionProps> = ({ children }
         setDisplayPath(pathname);
         const exitTimer = setTimeout(() => {
           setIsTransitioning(false);
-        }, 450);
+        }, 325);
         return () => clearTimeout(exitTimer);
-      }, 400);
+      }, 325);
 
       return () => clearTimeout(timer);
     }
@@ -30,65 +30,43 @@ export const CurtainTransition: React.FC<CurtainTransitionProps> = ({ children }
 
   return (
     <>
-      {/* Route Wipe Silk Gradient Panels */}
+      {/* Route Transition: Clean Ink Panel Wipe with Cream Wordmark Flash (650ms total) */}
       <AnimatePresence>
         {isTransitioning && (
-          <div className="fixed inset-0 z-50 pointer-events-none flex w-full h-full overflow-hidden">
-            {/* Left Silk Panel */}
+          <motion.div
+            initial={{ scaleY: 0 }}
+            animate={{ scaleY: 1 }}
+            exit={{ scaleY: 0 }}
+            transition={{
+              duration: 0.32,
+              ease: [0.65, 0, 0.35, 1],
+            }}
+            style={{ originY: 1 }}
+            className="fixed inset-0 z-50 pointer-events-none bg-ink flex items-center justify-center overflow-hidden"
+          >
             <motion.div
-              initial={{ x: "-100%" }}
-              animate={{ x: "0%" }}
-              exit={{ x: "-100%" }}
-              transition={{
-                duration: 0.4,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="w-1/2 h-full bg-sand border-r border-orange shadow-[6px_0_24px_rgba(242,106,27,0.25)] relative overflow-hidden"
-              style={{
-                background: "linear-gradient(115deg, #F3ECE0 0%, #E6D8C3 40%, #F7B58A 75%, #F26A1B 100%)",
-              }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.15, delay: 0.15 }}
+              className="text-center"
             >
-              <div className="absolute top-0 right-0 bottom-0 w-3 bg-gradient-to-l from-orange to-transparent opacity-80" />
+              <span className="font-display font-semibold text-2xl tracking-tight text-cream block">
+                Institute of Conversations
+              </span>
+              <span className="font-mono text-xs uppercase tracking-mono text-orange block mt-1">
+                MNIT JAIPUR
+              </span>
             </motion.div>
-
-            {/* Right Silk Panel */}
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: "0%" }}
-              exit={{ x: "100%" }}
-              transition={{
-                duration: 0.4,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="w-1/2 h-full bg-sand border-l border-orange shadow-[-6px_0_24px_rgba(242,106,27,0.25)] relative overflow-hidden"
-              style={{
-                background: "linear-gradient(-115deg, #F3ECE0 0%, #E6D8C3 40%, #F7B58A 75%, #F26A1B 100%)",
-              }}
-            >
-              <div className="absolute top-0 left-0 bottom-0 w-3 bg-gradient-to-r from-orange to-transparent opacity-80" />
-            </motion.div>
-
-            {/* Center Orange Spark */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.6 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.3 }}
-              transition={{ duration: 0.35 }}
-              className="absolute inset-0 flex items-center justify-center pointer-events-none"
-            >
-              <div className="w-12 h-12 rotate-45 border border-orange bg-cream shadow-orange-glow flex items-center justify-center">
-                <div className="w-3 h-3 bg-orange rotate-45 animate-pulse" />
-              </div>
-            </motion.div>
-          </div>
+          </motion.div>
         )}
       </AnimatePresence>
 
       <motion.div
         key={pathname}
-        initial={{ opacity: 0.9 }}
+        initial={{ opacity: 0.95 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.25 }}
         className="w-full flex-grow flex flex-col"
       >
         {children}

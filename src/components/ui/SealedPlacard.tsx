@@ -25,13 +25,14 @@ export const SealedPlacard: React.FC<SealedPlacardProps> = ({
   }[size];
 
   if (item.revealed && item.name) {
-    // Unveiled / Announced State
+    // Unveiled / Announced State with clean mask wipe
     return (
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ clipPath: "inset(0 100% 0 0)", opacity: 0 }}
+        animate={{ clipPath: "inset(0 0% 0 0)", opacity: 1 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className={cn(
-          "relative rounded-xl bg-cream border-2 border-orange p-6 flex flex-col items-center justify-center text-center shadow-subtle group hover:border-orange-deep transition-colors",
+          "relative rounded-card bg-paper border border-line p-6 flex flex-col items-center justify-center text-center shadow-card group hover:border-orange/60 transition-colors",
           sizeStyles,
           className
         )}
@@ -46,11 +47,11 @@ export const SealedPlacard: React.FC<SealedPlacardProps> = ({
             />
           </div>
         ) : (
-          <h4 className="font-sans font-bold text-2xl text-ink mb-1.5">
+          <h4 className="font-display font-semibold text-2xl text-ink mb-1.5 tracking-tight">
             {item.name}
           </h4>
         )}
-        <span className="font-mono text-xs uppercase tracking-mono text-orange-deep font-semibold">
+        <span className="font-mono text-xs uppercase tracking-mono text-orange font-medium">
           {item.tier}
         </span>
         {item.tag && (
@@ -61,7 +62,7 @@ export const SealedPlacard: React.FC<SealedPlacardProps> = ({
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 text-orange-deep hover:text-ink text-xs flex items-center gap-1 font-mono uppercase tracking-mono font-semibold"
+            className="mt-3 text-orange hover:text-ink text-xs flex items-center gap-1 font-mono uppercase tracking-mono font-medium"
           >
             <span>Visit Partner</span>
             <ExternalLink className="w-3 h-3" />
@@ -71,37 +72,31 @@ export const SealedPlacard: React.FC<SealedPlacardProps> = ({
     );
   }
 
-  // Sealed State (Theme Revision: --sand placards with cream inner border, small orange seal/lock glyph, slow orange breathing glow)
+  // Sealed State: --paper placard with hairline border, lock glyph in --ink-muted, "Revealing Soon"
   return (
     <div
       className={cn(
-        "relative rounded-xl bg-sand border border-sand-dark p-6 flex flex-col items-center justify-center text-center overflow-hidden shadow-subtle group hover:border-orange transition-all duration-300",
+        "relative rounded-card bg-paper border border-line p-6 flex flex-col items-center justify-center text-center overflow-hidden shadow-card group hover:border-orange/50 transition-colors duration-200",
         sizeStyles,
         className
       )}
     >
-      {/* Cream Inner Border Accent */}
-      <div className="absolute inset-2.5 rounded-lg border border-cream/80 pointer-events-none" />
-
-      {/* Slow Orange Breathing Glow */}
-      <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-orange/0 via-orange/15 to-orange/0 opacity-40 group-hover:opacity-100 animate-pulse transition-opacity" />
-
-      {/* Wax Seal / Lock Medallion Motif */}
-      <div className="relative z-10 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-cream border-2 border-orange shadow-orange-sm flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300">
-        <Lock className="w-5 h-5 text-orange" />
+      {/* Minimal Lock Icon in --ink-muted */}
+      <div className="relative z-10 w-11 h-11 rounded-full bg-cream-deep/60 border border-line flex items-center justify-center mb-3 text-ink-muted group-hover:text-orange transition-colors">
+        <Lock className="w-4 h-4" />
       </div>
 
       {/* Sealed Text in Mono Caps Ink */}
       <div className="relative z-10 text-center">
-        <span className="font-mono text-[10px] uppercase tracking-mono text-ink-soft font-semibold block mb-1">
+        <span className="font-mono text-[10px] uppercase tracking-mono text-ink-soft block mb-1">
           {item.tier}
         </span>
-        <h4 className="font-sans font-bold text-lg sm:text-xl text-ink tracking-tight">
+        <h4 className="font-display font-semibold text-base sm:text-lg text-ink tracking-tight">
           Revealing Soon
         </h4>
-        <span className="font-mono text-[9px] uppercase tracking-mono text-ink-soft/75 mt-1 block">
-          Curtain Held // In Camera
-        </span>
+        <p className="font-mono text-[10px] uppercase tracking-mono text-ink-muted mt-1">
+          CONFIDENTIAL · PARTNERSHIP ARCHIVE
+        </p>
       </div>
     </div>
   );

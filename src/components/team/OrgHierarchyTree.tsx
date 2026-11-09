@@ -47,7 +47,7 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
     <div className="w-full relative">
       {/* 1. TIER 1: LEADERSHIP (Faculty Advisor & Student Advisor) */}
       <div className="relative mb-16 text-center">
-        <div className="inline-block px-4 py-1 rounded-full bg-sand-light border border-sand font-mono text-[10px] tracking-mono uppercase text-ink font-semibold mb-6">
+        <div className="inline-block px-3.5 py-1 rounded-full bg-cream-deep/70 border border-line font-mono text-[10px] tracking-mono uppercase text-ink-soft mb-6">
           Institutional Governance & Advisory
         </div>
 
@@ -62,14 +62,16 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
           ))}
         </div>
 
-        {/* Drawn vertical orange connection down */}
-        <div className="w-[1.5px] h-12 bg-orange mx-auto mt-6" />
+        {/* Drawn vertical ink hairline with subtle orange pulse */}
+        <div className="relative w-[1px] h-12 bg-line mx-auto mt-6">
+          <div className="absolute top-0 left-0 w-full h-3 bg-orange animate-pulse" />
+        </div>
       </div>
 
       {/* 2. TIER 2: MENTORS (3rd Year) */}
       <div className="relative mb-20">
         <div className="text-center mb-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-sand-light border border-sand font-mono text-[10px] tracking-mono uppercase text-ink font-semibold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cream-deep/70 border border-line font-mono text-[10px] tracking-mono uppercase text-ink-soft">
             <Sparkles className="w-3 h-3 text-orange" />
             <span>Advisory Mentors // 3rd Year</span>
           </div>
@@ -79,16 +81,16 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
           {data.mentors.map((mentor) => (
             <div
               key={mentor.id}
-              className="bg-sand-light/50 p-4 rounded-xl border border-sand hover:border-orange transition-colors flex flex-col items-center shadow-subtle relative group"
+              className="bg-paper p-5 rounded-card border border-line hover:border-orange/60 transition-colors flex flex-col items-center shadow-card relative group"
             >
               <MemberCircle
                 member={mentor}
                 size="md"
                 onClick={setSelectedMember}
               />
-              <div className="mt-2 font-mono text-[10px] text-ink-soft tracking-wider text-center border-t border-sand pt-2 w-full">
+              <div className="mt-3 font-mono text-[10px] text-ink-soft tracking-mono text-center border-t border-line pt-2.5 w-full">
                 Mentoring:{" "}
-                <span className="text-ink font-semibold">
+                <span className="text-ink font-medium">
                   {mentor.mentoredTeamIds?.map((t) => t.replace(/-/g, " ")).join(", ")}
                 </span>
               </div>
@@ -96,10 +98,10 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
           ))}
         </div>
 
-        {/* Dashed Secondary Mentorship Line Note (darkened sand to 60% ink) */}
-        <div className="text-center mt-4">
-          <span className="font-mono text-[10px] tracking-mono uppercase text-ink-soft">
-            - - - Dashed Lines Represent Senior Advisory Mentorship to Respective Teams - - -
+        {/* Dashed Secondary Mentorship Line Note (dashed at 30% ink) */}
+        <div className="text-center mt-5">
+          <span className="font-mono text-[10px] tracking-mono uppercase text-ink-muted border-t border-dashed border-ink/30 pt-2 inline-block px-4">
+            Dashed Lines Represent Senior Advisory Mentorship to Respective Teams
           </span>
         </div>
       </div>
@@ -107,7 +109,7 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
       {/* 3. TIER 3: EXECUTIVE CORE (President & Vice President) */}
       <div className="relative mb-24">
         <div className="text-center mb-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-sand-light border border-sand font-mono text-[10px] tracking-mono uppercase text-ink font-semibold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cream-deep/70 border border-line font-mono text-[10px] tracking-mono uppercase text-ink-soft">
             <Shield className="w-3 h-3 text-orange" />
             <span>Executive Command</span>
           </div>
@@ -124,14 +126,14 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
           ))}
         </div>
 
-        {/* Orange horizontal bus dividing to the 5 teams */}
+        {/* Ink hairline bus dividing to the 5 teams */}
         <div className="max-w-4xl mx-auto relative mt-8 hidden md:block">
-          <div className="w-full h-[1.5px] bg-orange" />
-          <div className="flex justify-between items-center -mt-[1px] px-8">
+          <div className="w-full h-[1px] bg-line" />
+          <div className="flex justify-between items-center -mt-[3px] px-8">
             {data.teams.map((team) => (
               <div
                 key={team.id}
-                className="w-2.5 h-2.5 rotate-45 bg-orange shadow-orange-sm"
+                className="w-1.5 h-1.5 rotate-45 bg-orange"
               />
             ))}
           </div>
@@ -141,13 +143,13 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
       {/* 4. TIER 4: THE FIVE OPERATIONAL TEAMS */}
       <div className="relative">
         <div className="text-center mb-10">
-          <span className="font-mono text-xs uppercase tracking-mono text-orange-deep font-semibold block mb-1">
+          <span className="font-mono text-xs uppercase tracking-mono text-orange block mb-1">
             THE ENSEMBLE
           </span>
-          <h3 className="font-sans font-bold text-3xl sm:text-5xl text-ink tracking-tight">
+          <h3 className="font-display font-semibold text-3xl sm:text-5xl text-ink tracking-tight">
             Five Operational Wings
           </h3>
-          <p className="font-sans text-sm text-ink-soft max-w-xl mx-auto mt-2">
+          <p className="font-sans text-sm text-ink-soft max-w-xl mx-auto mt-2 text-pretty">
             Each wing led by a 2nd Year Team Lead, operating with structured talent, training cycles, and accountability.
           </p>
 
@@ -158,8 +160,8 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
               className={cn(
                 "px-4 py-1.5 rounded-full font-mono text-xs uppercase tracking-mono transition-all",
                 activeTeamTab === "all"
-                  ? "bg-orange text-ink font-bold shadow-orange-sm"
-                  : "bg-sand-light text-ink-soft hover:text-ink border border-sand"
+                  ? "bg-orange-strong text-cream font-medium shadow-soft"
+                  : "bg-paper text-ink-soft hover:text-ink border border-line"
               )}
             >
               All Teams ({data.teams.reduce((acc, t) => acc + t.members.length + 1, 0)})
@@ -171,8 +173,8 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
                 className={cn(
                   "px-4 py-1.5 rounded-full font-mono text-xs uppercase tracking-mono transition-all",
                   activeTeamTab === team.id
-                    ? "bg-orange text-ink font-bold shadow-orange-sm"
-                    : "bg-sand-light text-ink-soft hover:text-ink border border-sand"
+                    ? "bg-orange-strong text-cream font-medium shadow-soft"
+                    : "bg-paper text-ink-soft hover:text-ink border border-line"
                 )}
               >
                 {team.name} ({team.members.length + 1})
@@ -182,7 +184,7 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
         </div>
 
         {/* Teams Display Grid */}
-        <div className="space-y-12">
+        <div className="space-y-10">
           {data.teams
             .filter((t) => activeTeamTab === "all" || activeTeamTab === t.id)
             .map((team) => {
@@ -192,19 +194,19 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
               return (
                 <div
                   key={team.id}
-                  className="bg-sand-light/40 border border-sand rounded-2xl p-6 sm:p-10 relative overflow-hidden shadow-card"
+                  className="bg-paper border border-line rounded-card p-6 sm:p-10 relative overflow-hidden shadow-card"
                 >
                   {/* Top orange trim line */}
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-orange" />
 
                   {/* Team Wing Header */}
-                  <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-sand gap-4">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-line gap-4">
                     <div className="flex items-center gap-3.5">
-                      <div className="w-10 h-10 rounded-lg bg-cream border border-sand flex items-center justify-center text-orange shrink-0">
+                      <div className="w-10 h-10 rounded-card bg-cream-deep/60 border border-line flex items-center justify-center text-orange shrink-0">
                         <TeamIcon className="w-5 h-5" />
                       </div>
                       <div>
-                        <h4 className="font-sans font-bold text-2xl text-ink tracking-tight">
+                        <h4 className="font-display font-semibold text-2xl text-ink tracking-tight">
                           {team.name}
                         </h4>
                         <p className="font-sans text-xs text-ink-soft mt-0.5">
@@ -214,12 +216,12 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
                     </div>
 
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs px-3 py-1 rounded-full bg-cream border border-sand text-ink">
+                      <span className="font-mono text-xs px-3 py-1 rounded-full bg-cream-deep/60 border border-line text-ink-soft">
                         1 Lead + {team.members.length} Members
                       </span>
                       <button
                         onClick={() => toggleMobileTeam(team.id)}
-                        className="md:hidden p-1.5 rounded-md bg-sand text-ink"
+                        className="md:hidden p-1.5 rounded-full bg-cream-deep text-ink"
                         aria-label="Toggle team view"
                       >
                         <ChevronDown
@@ -236,7 +238,7 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
                   <div className={cn("pt-8", isExpanded ? "block" : "hidden md:block")}>
                     {/* Team Lead Section */}
                     <div className="flex flex-col items-center text-center mb-8">
-                      <div className="font-mono text-[10px] uppercase tracking-mono font-bold text-orange-deep mb-2">
+                      <div className="font-mono text-[10px] uppercase tracking-mono font-medium text-orange mb-2">
                         Wing Leadership
                       </div>
                       <MemberCircle
@@ -244,12 +246,12 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
                         size="sm"
                         onClick={setSelectedMember}
                       />
-                      <div className="w-[1.5px] h-6 bg-orange mt-2" />
+                      <div className="w-[1px] h-6 bg-line mt-2" />
                     </div>
 
                     {/* Member Grid */}
                     <div className="text-center mb-4">
-                      <span className="font-mono text-[10px] uppercase tracking-mono text-ink-soft font-semibold">
+                      <span className="font-mono text-[10px] uppercase tracking-mono text-ink-muted">
                         Ensemble Members
                       </span>
                     </div>
@@ -258,7 +260,7 @@ export const OrgHierarchyTree: React.FC<OrgHierarchyTreeProps> = ({ data }) => {
                       {team.members.map((member) => (
                         <div
                           key={member.id}
-                          className="bg-cream/80 p-3 rounded-xl border border-sand hover:border-orange transition-colors flex flex-col items-center"
+                          className="bg-cream-deep/40 p-3 rounded-card border border-line hover:border-orange/60 transition-colors flex flex-col items-center"
                         >
                           <MemberCircle
                             member={member}

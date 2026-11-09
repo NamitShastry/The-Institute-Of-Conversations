@@ -1,7 +1,10 @@
 import fs from "fs";
 import path from "path";
 
+// Revision 3 Palette Rules:
+// Reject all old navy, gold, Revision 2 sand/peach/old-orange/rust/old-ink/old-cream hexes.
 const FORBIDDEN_HEXES = [
+  // Old Navy & Gold (Rev 1)
   "#0B1F3A",
   "#02163B",
   "#102541",
@@ -11,6 +14,24 @@ const FORBIDDEN_HEXES = [
   "#FFFDF8",
   "#FDF1EE",
   "#9B2C2C",
+  // Old Sand & Peach (Rev 2)
+  "#D9C3A5",
+  "#E6D8C3",
+  "#C5AB89",
+  "#F7B58A",
+  "#FCD8C1",
+  // Old Orange & Rust (Rev 2)
+  "#F26A1B",
+  "#D85A12",
+  "#B8470F",
+  "#7A2E12",
+  // Old Ink & Cream (Rev 2)
+  "#1C1713",
+  "#5E5349",
+  "#8C8075",
+  "#F3ECE0",
+  "#FAF6F0",
+  "#EADDCB",
 ].map((h) => h.toLowerCase());
 
 const DIRS_TO_CHECK = ["src", "content"];
@@ -27,7 +48,14 @@ let violations = [];
 function checkFile(filePath) {
   const fileName = path.basename(filePath);
   if (EXCLUDED_FILES.includes(fileName)) return;
-  if (fileName.endsWith(".png") || fileName.endsWith(".jpg") || fileName.endsWith(".jpeg") || fileName.endsWith(".ico")) {
+  if (
+    fileName.endsWith(".png") ||
+    fileName.endsWith(".jpg") ||
+    fileName.endsWith(".jpeg") ||
+    fileName.endsWith(".ico") ||
+    fileName.endsWith(".docx") ||
+    fileName.endsWith(".pdf")
+  ) {
     return;
   }
 
@@ -35,7 +63,6 @@ function checkFile(filePath) {
   const lines = content.split("\n");
 
   lines.forEach((line, index) => {
-    // Check if line contains any forbidden hex
     const lowerLine = line.toLowerCase();
     FORBIDDEN_HEXES.forEach((hex) => {
       if (lowerLine.includes(hex)) {
@@ -68,13 +95,12 @@ for (const dir of DIRS_TO_CHECK) {
 }
 
 if (violations.length > 0) {
-  console.error("❌ Palette Check Failed! Found forbidden old navy/gold hex codes in source:");
+  console.error("❌ Palette Check Failed! Found forbidden old navy/gold/sand/orange hex codes in source:");
   violations.forEach((v) => {
     console.error(`  ${v.file}:${v.line} -> Found ${v.hex}: "${v.snippet}"`);
   });
   process.exit(1);
 } else {
-  console.log("✅ Palette Check Passed! No forbidden navy/gold hex codes found in src/ or content/.");
+  console.log("✅ Palette Check Passed! Strictly using Revision 3 palette (Cream #F3EEE3 · Ink #111111 · Burnt Orange #D9541E).");
   process.exit(0);
 }
-

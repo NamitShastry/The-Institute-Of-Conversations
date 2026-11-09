@@ -15,17 +15,14 @@ export const metadata: Metadata = {
 export default function TeamPage() {
   return (
     <div className="w-full bg-cream text-ink min-h-screen pt-28 pb-32 relative overflow-hidden">
-      {/* Background paper texture */}
-      <div className="absolute inset-0 pointer-events-none paper-grain" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Eyebrow number="04" label="OUR TEAM" className="mb-3" />
-          <h1 className="font-sans font-bold text-4xl sm:text-6xl md:text-7xl tracking-tightest text-ink mt-2">
-            The Ensemble
+          <h1 className="font-display font-semibold text-4xl sm:text-6xl md:text-7xl tracking-tightest text-ink mt-2">
+            The <span className="font-accent text-ink">Ensemble</span>
           </h1>
-          <p className="font-serif italic text-orange-deep text-lg sm:text-2xl mt-3">
+          <p className="font-serif italic text-ink-soft text-lg sm:text-xl mt-3">
             &ldquo;A structured institution for long-form dialogue, research, and institutional memory.&rdquo;
           </p>
           <GoldRule />

@@ -6,7 +6,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { GoldRule } from "@/components/ui/GoldRule";
 import { GalleryData, GalleryItem } from "@/lib/types";
 import rawGalleryData from "@content/gallery.json";
-import { Film, Clapperboard, Sparkles, X } from "lucide-react";
+import { Clapperboard, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const galleryData = rawGalleryData as GalleryData;
@@ -22,17 +22,14 @@ export default function GalleryPage() {
 
   return (
     <div className="w-full bg-cream text-ink min-h-screen pt-28 pb-32 relative overflow-hidden">
-      {/* Background paper texture */}
-      <div className="absolute inset-0 pointer-events-none paper-grain" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <Eyebrow number="06" label="GALLERY" className="mb-3" />
-          <h1 className="font-sans font-bold text-4xl sm:text-6xl md:text-7xl tracking-tightest text-ink mt-2">
-            The Reel
+          <h1 className="font-display font-semibold text-4xl sm:text-6xl md:text-7xl tracking-tightest text-ink mt-2">
+            The <span className="font-accent text-ink">Reel</span>
           </h1>
-          <p className="font-serif italic text-orange-deep text-lg sm:text-2xl mt-3">
+          <p className="font-serif italic text-ink-soft text-lg sm:text-2xl mt-3">
             &ldquo;Contact sheets and documentary captures from the recording floor.&rdquo;
           </p>
           <GoldRule />
@@ -46,8 +43,8 @@ export default function GalleryPage() {
                 className={cn(
                   "px-4 py-1.5 rounded-full font-mono text-xs uppercase tracking-mono transition-all",
                   activeAlbum === album.id
-                    ? "bg-orange text-ink font-bold shadow-orange-sm"
-                    : "bg-sand-light text-ink-soft hover:text-ink border border-sand"
+                    ? "bg-orange-strong text-cream font-medium shadow-soft"
+                    : "bg-paper text-ink-soft hover:text-ink border border-line"
                 )}
               >
                 {album.name}
@@ -63,7 +60,7 @@ export default function GalleryPage() {
               <div
                 key={item.id}
                 onClick={() => setActiveLightboxItem(item)}
-                className="group relative h-72 rounded-xl overflow-hidden bg-sand border border-sand-dark cursor-pointer shadow-subtle hover:border-orange transition-all duration-300"
+                className="group relative h-72 rounded-card overflow-hidden bg-paper border border-line cursor-pointer shadow-card hover:border-orange/60 transition-colors"
               >
                 <Image
                   src={item.image}
@@ -73,7 +70,7 @@ export default function GalleryPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <h4 className="font-sans font-bold text-lg text-cream">
+                  <h4 className="font-display font-semibold text-lg text-cream tracking-tight">
                     {item.title}
                   </h4>
                   <p className="font-sans text-xs text-cream/80 mt-0.5 line-clamp-1">
@@ -84,77 +81,76 @@ export default function GalleryPage() {
             ))}
           </div>
         ) : (
-          /* Empty State: Cream stage with one orange silk drape and "The first reel is being shot." */
-          <div className="max-w-2xl mx-auto my-12 bg-sand-light/60 border border-sand rounded-3xl p-10 sm:p-16 text-center relative overflow-hidden shadow-card">
-            {/* Silk Drape Accent along right side */}
-            <div
-              className="absolute top-0 right-0 w-36 h-full opacity-60 pointer-events-none"
-              style={{
-                background: "linear-gradient(135deg, #F3ECE0 0%, #E6D8C3 40%, #F7B58A 75%, #F26A1B 100%)",
-              }}
-            />
-
+          /* Empty State: Quiet cream panel with single line illustration of empty reel */
+          <div className="max-w-2xl mx-auto my-12 bg-paper border border-line rounded-card p-10 sm:p-16 text-center relative overflow-hidden shadow-card">
             <div className="relative z-10 flex flex-col items-center">
-              <div className="w-18 h-18 rounded-full bg-cream border-2 border-orange flex items-center justify-center mb-6 shadow-orange-sm">
-                <Clapperboard className="w-8 h-8 text-orange" />
+              {/* Single Line Illustration of Empty Film Reel */}
+              <div className="w-16 h-16 rounded-full bg-cream-deep/60 border border-line flex items-center justify-center mb-6 text-ink-muted">
+                <svg className="w-8 h-8 text-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <circle cx="12" cy="12" r="3" />
+                  <circle cx="12" cy="6" r="1.5" fill="currentColor" />
+                  <circle cx="12" cy="18" r="1.5" fill="currentColor" />
+                  <circle cx="6" cy="12" r="1.5" fill="currentColor" />
+                  <circle cx="18" cy="12" r="1.5" fill="currentColor" />
+                </svg>
               </div>
 
-              <span className="font-mono text-xs uppercase tracking-mono font-semibold text-orange-deep mb-2">
-                PRODUCTION FLOOR // ARCHIVE
+              <span className="font-mono text-xs uppercase tracking-mono text-orange block mb-2 font-medium">
+                PRODUCTION IN PROGRESS
               </span>
 
-              <h3 className="font-sans font-bold text-3xl sm:text-4xl text-ink tracking-tight mb-3">
-                {galleryData.emptyStateMessage}
+              <h3 className="font-display font-semibold text-2xl sm:text-3xl text-ink tracking-tight mb-2">
+                The first reel is being shot.
               </h3>
 
-              <p className="font-sans text-sm text-ink-soft max-w-md mx-auto leading-relaxed mb-6">
-                {galleryData.emptyStateDescription}
+              <p className="font-sans text-sm text-ink-soft max-w-md mx-auto leading-relaxed text-pretty">
+                Archival documentary captures, green room portraits, and production floor contact sheets will appear here following inaugural sessions.
               </p>
+            </div>
+          </div>
+        )}
 
-              <div className="flex items-center space-x-2 font-mono text-xs text-ink bg-cream px-4 py-2 rounded-full border border-sand">
-                <Sparkles className="w-3.5 h-3.5 text-orange" />
-                <span>Lossless 4K Captures & Archival Stills Loading Soon</span>
+        {/* Lightbox Modal with rgba(17,17,17,.92) backdrop */}
+        {activeLightboxItem && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8"
+            style={{ backgroundColor: "rgba(17,17,17,0.92)" }}
+            onClick={() => setActiveLightboxItem(null)}
+          >
+            <div
+              className="relative max-w-4xl w-full bg-paper rounded-card overflow-hidden border border-line p-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setActiveLightboxItem(null)}
+                className="absolute top-4 right-4 z-10 p-2 rounded-full bg-ink/70 text-cream hover:bg-ink transition-colors"
+                aria-label="Close lightbox"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="relative w-full h-[60vh] rounded-card overflow-hidden bg-cream-deep mb-4">
+                <Image
+                  src={activeLightboxItem.image}
+                  alt={activeLightboxItem.title}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+
+              <div className="px-2">
+                <h3 className="font-display font-semibold text-xl text-ink tracking-tight">
+                  {activeLightboxItem.title}
+                </h3>
+                <p className="font-sans text-sm text-ink-soft mt-1">
+                  {activeLightboxItem.caption}
+                </p>
               </div>
             </div>
           </div>
         )}
       </div>
-
-      {/* Lightbox Modal (Backdrop is --ink at 88% per theme specs) */}
-      {activeLightboxItem && (
-        <div
-          onClick={() => setActiveLightboxItem(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/88 backdrop-blur-sm"
-        >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="relative max-w-4xl w-full bg-cream border border-sand rounded-2xl overflow-hidden shadow-card"
-          >
-            <button
-              onClick={() => setActiveLightboxItem(null)}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-cream/90 text-ink hover:text-orange transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
-            <div className="relative h-[60vh] w-full bg-ink/90">
-              <Image
-                src={activeLightboxItem.image}
-                alt={activeLightboxItem.title}
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="p-6 bg-sand">
-              <h4 className="font-sans font-bold text-2xl text-ink">
-                {activeLightboxItem.title}
-              </h4>
-              <p className="font-sans text-sm text-ink-soft mt-1">
-                {activeLightboxItem.caption}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" fill="none" width="100%" height="100%">
+  <defs>
+    <!-- Duotone Studio Vignette -->
+    <radialGradient id="studioVignette" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#26221F"/>
+      <stop offset="55%" stop-color="#181513"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </radialGradient>
+
+    <!-- Key Light Gradient -->
+    <linearGradient id="keyLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3EEE3" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#F3EEE3" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#111111" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Metallic Duotone Gradients -->
+    <linearGradient id="metalDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1C1815"/>
+      <stop offset="45%" stop-color="#3A342F"/>
+      <stop offset="70%" stop-color="#24201D"/>
+      <stop offset="100%" stop-color="#14110F"/>
+    </linearGradient>
+
+    <linearGradient id="metalHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EAE3D3" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#8A857B" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3A342F" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <linearGradient id="orangeGlow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#D9541E" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#D9541E" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Soft Drop Shadow Filter -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Subtle Grain / Studio Baffle Pattern -->
+    <pattern id="acousticSlats" width="24" height="24" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="24" stroke="#F3EEE3" stroke-width="0.75" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="700" fill="url(#studioVignette)"/>
+  <rect width="600" height="700" fill="url(#acousticSlats)"/>
+  <rect width="600" height="700" fill="url(#keyLight)"/>
+
+  <!-- Architectural Jharokha Arch Silhouette (Proscenium Anchor) -->
+  <g opacity="0.35" transform="translate(150, 40)">
+    <!-- Outer Arch -->
+    <path d="M 0 340 L 0 160 C 0 70, 70 0, 150 0 C 230 0, 300 70, 300 160 L 300 340" 
+          stroke="#F3EEE3" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+    <!-- Cusped Trefoil Inner Crown -->
+    <path d="M 30 340 L 30 180 C 30 130, 70 100, 100 100 C 120 70, 180 70, 200 100 C 230 100, 270 130, 270 180 L 270 340" 
+          stroke="#F3EEE3" stroke-width="1" fill="none"/>
+    <!-- Arch Finial & Spire -->
+    <line x1="150" y1="0" x2="150" y2="-25" stroke="#F3EEE3" stroke-width="1.5"/>
+    <circle cx="150" cy="-28" r="3.5" fill="#F3EEE3"/>
+  </g>
+
+  <!-- Studio Floor & Desk Horizon -->
+  <path d="M 0 540 L 600 540 L 600 700 L 0 700 Z" fill="#0D0B0A"/>
+  <line x1="0" y1="540" x2="600" y2="540" stroke="#F3EEE3" stroke-width="1" stroke-opacity="0.1"/>
+
+  <!-- Broadcast Boom Microphone (Entering from Top Right) -->
+  <g filter="url(#softShadow)">
+    <!-- Boom Arm Scissor Hinges -->
+    <g stroke="url(#metalHighlight)" stroke-width="3.5" stroke-linecap="round">
+      <line x1="580" y1="60" x2="430" y2="180"/>
+      <line x1="430" y1="180" x2="360" y2="310"/>
+      <!-- Parallel stabilizing rod -->
+      <line x1="570" y1="80" x2="425" y2="195" stroke-width="2" stroke-opacity="0.6"/>
+      <line x1="425" y1="195" x2="355" y2="320" stroke-width="2" stroke-opacity="0.6"/>
+    </g>
+
+    <!-- Articulating Knobs & Pivot Joints -->
+    <circle cx="430" cy="180" r="9" fill="#24201D" stroke="#8A857B" stroke-width="1.5"/>
+    <circle cx="360" cy="310" r="7" fill="#24201D" stroke="#8A857B" stroke-width="1.5"/>
+
+    <!-- Shockmount Suspension Cradle -->
+    <g transform="translate(360, 310)">
+      <!-- Outer Ring -->
+      <ellipse cx="0" cy="40" rx="36" ry="20" stroke="#8A857B" stroke-width="2.5" fill="none"/>
+      <!-- Inner Ring -->
+      <ellipse cx="0" cy="40" rx="26" ry="14" stroke="#F3EEE3" stroke-width="1.5" stroke-opacity="0.7" fill="none"/>
+      <!-- Elastic Bands (Bespoke duotone lines) -->
+      <line x1="-34" y1="36" x2="-22" y2="44" stroke="#D9541E" stroke-width="1.5"/>
+      <line x1="34" y1="36" x2="22" y2="44" stroke="#D9541E" stroke-width="1.5"/>
+
+      <!-- Condenser Capsule & Body -->
+      <rect x="-18" y="0" width="36" height="82" rx="18" fill="url(#metalDark)" stroke="#4A443E" stroke-width="1.5"/>
+      <!-- Mesh Grille Upper Half -->
+      <path d="M -18 18 C -18 8, -8 0, 0 0 C 8 0, 18 8, 18 18 L 18 42 L -18 42 Z" fill="#2A2522" stroke="#8A857B" stroke-width="1"/>
+      <line x1="-18" y1="42" x2="18" y2="42" stroke="#D9541E" stroke-width="2"/>
+
+      <!-- Circular Pop Filter Ring in Foreground -->
+      <g transform="translate(0, 42)">
+        <circle cx="0" cy="0" r="34" stroke="#1C1815" stroke-width="4.5" fill="none"/>
+        <circle cx="0" cy="0" r="32" stroke="#8A857B" stroke-width="1" fill="#F3EEE3" fill-opacity="0.05"/>
+        <line x1="-34" y1="0" x2="-44" y2="16" stroke="#4A443E" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Professional Studio Monitor Headphones Resting on Desk (Lower Right) -->
+  <g transform="translate(360, 490)" filter="url(#softShadow)">
+    <!-- Contact Shadow -->
+    <ellipse cx="60" cy="72" rx="70" ry="14" fill="#000000" fill-opacity="0.7"/>
+
+    <!-- Headband Arc -->
+    <path d="M 10 40 C 20 -20, 100 -20, 110 40" stroke="#1A1715" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M 10 40 C 20 -20, 100 -20, 110 40" stroke="#4A443E" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <!-- Left Ear Cup (Angled) -->
+    <g transform="translate(10, 42) rotate(-15)">
+      <ellipse cx="0" cy="0" rx="22" ry="32" fill="#24201D" stroke="#8A857B" stroke-width="2"/>
+      <ellipse cx="0" cy="0" rx="15" ry="24" fill="#14110F"/>
+      <!-- Outer Metal Gimbal Yoke -->
+      <path d="M -24 -6 C -26 0, -26 12, -24 18" stroke="#F3EEE3" stroke-width="2.5" fill="none"/>
+    </g>
+
+    <!-- Right Ear Cup (Flat on surface) -->
+    <g transform="translate(110, 42) rotate(15)">
+      <ellipse cx="0" cy="0" rx="22" ry="32" fill="#24201D" stroke="#8A857B" stroke-width="2"/>
+      <ellipse cx="0" cy="0" rx="15" ry="24" fill="#14110F"/>
+      <circle cx="0" cy="0" r="6" fill="#D9541E" fill-opacity="0.8"/>
+    </g>
+
+    <!-- Coiled Audio Cable Dropping Down -->
+    <path d="M 2 54 C -12 70, -8 86, 4 92 C 16 98, 28 88, 36 102 C 42 112, 34 126, 48 134" 
+          stroke="#111111" stroke-width="3" fill="none"/>
+    <path d="M 2 54 C -12 70, -8 86, 4 92 C 16 98, 28 88, 36 102 C 42 112, 34 126, 48 134" 
+          stroke="#4A443E" stroke-width="1" stroke-dasharray="2 3" fill="none"/>
+  </g>
+
+  <!-- Ambient Light Reflection on Desk Edge -->
+  <ellipse cx="300" cy="540" rx="240" ry="1" fill="#F3EEE3" fill-opacity="0.3"/>
+</svg>
+
